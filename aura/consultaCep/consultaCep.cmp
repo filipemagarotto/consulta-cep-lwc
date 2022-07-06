@@ -1,0 +1,5 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global">
+    <c:consultaCepLwc recordId="{!v.recordId}" onvaluechange="{!c.getValueFromLwc}"></c:consultaCepLwc>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+</aura:component>

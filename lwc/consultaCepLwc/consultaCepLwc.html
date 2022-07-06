@@ -1,0 +1,32 @@
+<template>
+    <div class="slds-grid slds-gutters slds-grid_vertical-align-end">
+        <div class="slds-col slds-size_1-of-2">
+            <lightning-input type="text" max-length="8" name="cepConsulta" label="CEP" onchange={handleCep} value={valueCepConsulta}></lightning-input>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+            <lightning-button type="submit" class="slds-theme_brand" disabled={valueCepTamanhoAdequado} variant="brand" label="Consultar" onclick={handleConsultar} style="margin-left:5px;"></lightning-button>
+
+            <lightning-button type="submit" class="slds-theme_brand" disabled={aptoSave} variant="brand" label="Salvar" onclick={handleSalvarEndereco} style="margin-left:5px;"></lightning-button>
+
+            <lightning-button type="submit" class="slds-theme_brand" variant="brand-outline" label="Resetar" onclick={reset} style="margin-left:5px;"></lightning-button>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <lightning-input type="text" name="logradouro" label="Logradouro" value={valueLogradouro} onchange={handleCepValue}></lightning-input>
+        </div>
+        <div class="slds-col">
+            <lightning-input type="text" name="cidade" label="Cidade" value={valueCidade} onchange={handleCepValue}></lightning-input>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <lightning-input type="text" name="cep" label="CEP" value={valueCep} onchange={handleCepValue}></lightning-input>
+        </div>
+        <div class="slds-col">
+            <lightning-input type="text" name="estado" label="Estado" value={valueEstado} onchange={handleCepValue}></lightning-input>
+        </div>
+    </div>
+</template>
